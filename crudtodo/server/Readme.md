@@ -7,10 +7,10 @@ Table: todotask
 
 Columns:
 taskid
-int AI PK
+int AI PK,
 tasks
-varchar(100)
+varchar(100),
 complete
-int
+int,
 editON
-int
+int ;
