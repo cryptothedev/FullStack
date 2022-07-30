@@ -40,7 +40,7 @@ function App() {
     })
   }
 
-  return (
+  return ( 
     <div className='container'>
       <div className='app-wrapper'>
           <div className='header'><h2>Todolist</h2></div>
@@ -56,7 +56,9 @@ function App() {
               onClick={getInput}>sumbit</button>
               </form>
           </div>
-          <div>
+          
+
+            <div>
               {getTodos()}
               {todos.map((val)=>{
                 return(
@@ -75,7 +77,6 @@ function App() {
                           seteditTodos(event.target.value)}
                         }
                         >
-                        
                         </input>
                         </div>                        
                         }
@@ -105,7 +106,9 @@ function App() {
                       </li>
                 )
               })}
-          </div>
+            </div>
+
+          
       </div>
     </div>
   );
