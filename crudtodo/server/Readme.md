@@ -6,11 +6,11 @@ Schemas : todosystem
 Table: todotask
 
 Columns:
-taskid
+`taskid`
 int AI PK,
-tasks
+`tasks`
 varchar(100),
-complete
+`complete`
 int,
-editON
+`editON`
 int ;
