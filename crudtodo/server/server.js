@@ -10,11 +10,11 @@ server.use(express.json())
 server.listen(port_number);
 
 const connection = mysql.createConnection({
-    host:'x71wqc4m22j8e3ql.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-    port: '3306',
-    user:'qp2hqx5u9ax2cu4z',
-    password:'zqh95a4oblgp1r4w',
-    database:'n078766yizzhxg00'
+    host:'XXX',
+    port: 'XXX',
+    user:'XXX',
+    password:'XXX',
+    database:'XXX'
 })
 
 server.post('/addtodos',(req,res)=>{
