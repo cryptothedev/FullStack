@@ -31,7 +31,7 @@ function App() {
   }
 
   const editclick = (taskid) => {
-    Axios.put(`hhttps://todo-list-crud-api-jk.herokuapp.com/editclick/${taskid}`)
+    Axios.put(`https://todo-list-crud-api-jk.herokuapp.com/editclick/${taskid}`)
   }
 
   const editsumbit = (taskid) => {
