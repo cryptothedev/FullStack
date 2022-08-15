@@ -1,19 +1,19 @@
 * {
     margin: 0;
     padding: 0;
-  }
-  
-  .container {
-    background: linear-gradient(to left top,#447eeb, #000f63);
-    width: 100%; 
+}
+
+.container {
+    background: linear-gradient(to left top, #447eeb, #000f63);
+    width: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .app-wrapper {
-    background:linear-gradient(to left top,#3672e2, #a8a6a6);
+}
+
+.app-wrapper {
+    background: linear-gradient(to left top, #3672e2, #a8a6a6);
     min-width: 450px;
     min-height: 650px;
     padding: 30px;
@@ -21,17 +21,17 @@
     border-radius: 30px;
     box-shadow: 3px 6px 40px #000;
     margin-bottom: 10px;
-  
-  }
-  
-  .header {
+
+}
+
+.header {
     color: rgb(0, 0, 0);
     text-align: left;
     margin-left: 8px;
     margin-bottom: 15px;
-  }
-  
-  .task-input {
+}
+
+.task-input {
     outline: none;
     width: 300px;
     padding: 15px;
@@ -41,9 +41,9 @@
     background-color: #ffffff;
     border: 1px solid #ffffff5f;
     border-radius: 16px;
-  }
-  
-  .button-add {
+}
+
+.button-add {
     width: 85px;
     padding: 15px;
     font-size: 15px;
@@ -51,55 +51,56 @@
     border: none;
     background-color: #ffffff;
     cursor: pointer;
-  }
-  
-  .list-item {
+}
+
+.list-item {
     display: flex;
     margin: 20px 0;
     border: 2px solid #ccc;
     border-radius: 16px;
     padding: 10px;
     max-height: 30px;
-  }
-  
-  .button-complete,
-  .button-delete,
-  .button-edit,
-  .button-editsumbit {
+}
+
+.button-complete,
+.button-delete,
+.button-edit,
+.button-editsumbit {
     border: none;
     cursor: pointer;
     background-color: transparent;
     font-size: 20px;
     border-radius: 50%;
-  }
-  
-  .button-complete {
+}
+
+.button-complete {
     color: rgb(255, 255, 255);
     margin-right: 20px;
-  }
-  
-  .button-edit {
+}
+
+.button-edit {
     color: rgb(255, 255, 255);
     margin-right: 20px;
-  }
-  
-  .button-delete {
+}
+
+.button-delete {
     color: rgb(255, 255, 255);
     margin-right: 10px;
-  }
-  .button-editsumbit {
-    color:rgb(255, 255, 255);
-    margin-right: 20px;
-  }
+}
 
-  .complete {
+.button-editsumbit {
+    color: rgb(255, 255, 255);
+    margin-right: 20px;
+}
+
+.complete {
     text-decoration-style: solid;
     text-decoration-line: line-through;
-    text-decoration-color: #ff6c6c ;
+    text-decoration-color: #ff6c6c;
     opacity: 1;
-  }
-  
-  .list {
+}
+
+.list {
     width: 250px;
     border: none;
     color: rgb(0, 0, 0);
@@ -107,12 +108,12 @@
     padding-left: 10px;
     margin-right: 50px;
     background-color: transparent;
-  }
-  
-  input:focus,
-  button:focus {
+}
+
+input:focus,
+button:focus {
     outline: none;
-  }
+}
   
   
   
