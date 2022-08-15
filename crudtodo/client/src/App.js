@@ -11,31 +11,31 @@ function App() {
   const [editTodos,seteditTodos] = useState("");
 
   const getTodos = () => {
-    Axios.get(`http://localhost:3000/`).then((response)=> {
+    Axios.get(`https://todo-list-crud-api-jk.herokuapp.com/`).then((response)=> {
       setTodos(response.data);
     });
   };
 
   const getInput = () => {
-    Axios.post(`http://localhost:3000/addtodos`,{
+    Axios.post(`https://todo-list-crud-api-jk.herokuapp.com/addtodos`,{
       input: input
     })
   };
   
   const completetodos = (taskid) => {
-    Axios.put(`http://localhost:3000/complete/${taskid}`)
+    Axios.put(`https://todo-list-crud-api-jk.herokuapp.com/complete/${taskid}`)
   }
 
   const deletetodos = (taskid) => {
-    Axios.delete(`http://localhost:3000/deletetodos/${taskid}`)
+    Axios.delete(`https://todo-list-crud-api-jk.herokuapp.com/deletetodos/${taskid}`)
   }
 
   const editclick = (taskid) => {
-    Axios.put(`http://localhost:3000/editclick/${taskid}`)
+    Axios.put(`hhttps://todo-list-crud-api-jk.herokuapp.com/editclick/${taskid}`)
   }
 
   const editsumbit = (taskid) => {
-    Axios.put(`http://localhost:3000/editsumbit/${taskid}`,{
+    Axios.put(`https://todo-list-crud-api-jk.herokuapp.com/editsumbit/${taskid}`,{
       editTodos: editTodos
     })
   }

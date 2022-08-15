@@ -1,24 +1,26 @@
 //server
 var express = require('express')
 var cors = require('cors')
-var mysql = require('mysql')
-const e = require('express')
+const mysql = require('mysql')
+var port_number = process.env.PORT || 3000 ;
+const database = 'n078766yizzhxg00'
 var server = express()
 server.use(cors())
 server.use(express.json())
-server.listen(3000,()=>{console.log('Running on port 3000')})
+server.listen(port_number);
 
 const connection = mysql.createConnection({
-    host:'localhost',
-    user:'root',
-    password:'root6669',
-    database:'todosystem'
+    host:'x71wqc4m22j8e3ql.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+    port: '3306',
+    user:'qp2hqx5u9ax2cu4z',
+    password:'zqh95a4oblgp1r4w',
+    database:'n078766yizzhxg00'
 })
 
 server.post('/addtodos',(req,res)=>{
     const input = req.body.input;
     if (input != "") {
-    connection.query("INSERT INTO todosystem.todotask (tasks) VALUES (?);",[input],
+    connection.query(`INSERT INTO ${database}.todotask (tasks) VALUES (?);`,[input],
     (err,result)=>{
         if(err) {
             console.log(err)
@@ -32,7 +34,7 @@ server.post('/addtodos',(req,res)=>{
 })
 
 server.get('/',(req,res)=>{
-    connection.query("SELECT * FROM todosystem.todotask;",(err,result)=>{
+    connection.query(`SELECT * FROM ${database}.todotask;`,(err,result)=>{
         if (err) {
             console.log(err);
         } else {
@@ -43,7 +45,7 @@ server.get('/',(req,res)=>{
 
 server.put('/complete/:taskid',(req,res)=>{
     const taskid = req.params.taskid;
-    connection.query("UPDATE todosystem.todotask SET complete = complete +1 WHERE taskid = ?",taskid,
+    connection.query(`UPDATE ${database}.todotask SET complete = complete +1 WHERE taskid = ?`,taskid,
     (err,result)=>{
         if (err) {
             console.log(err);
@@ -55,7 +57,7 @@ server.put('/complete/:taskid',(req,res)=>{
 
 server.delete('/deletetodos/:taskid',(req,res)=>{
     const taskid = req.params.taskid;
-    connection.query("DELETE FROM todosystem.todotask WHERE (taskid = ?) ", taskid ,
+    connection.query(`DELETE FROM ${database}.todotask WHERE (taskid = ?)`, taskid ,
     (err,result)=>{
         if (err) {
             console.log(err);
@@ -69,7 +71,7 @@ server.put('/editsumbit/:taskid',(req,res)=>{
     const taskid = req.params.taskid;
     const editTodos = req.body.editTodos;
     if (editTodos !== "") {
-        connection.query("UPDATE todosystem.todotask SET tasks = ?, editON = editON +1 WHERE taskid = ?;",
+        connection.query(`UPDATE ${database}.todotask SET tasks = ?, editON = editON +1 WHERE taskid = ?;`,
         [editTodos,taskid],
         (err,result)=>{
             if (err) {
@@ -83,7 +85,7 @@ server.put('/editsumbit/:taskid',(req,res)=>{
 
 server.put('/editclick/:taskid',(req,res)=>{
     const taskid = req.params.taskid
-    connection.query("UPDATE todosystem.todotask SET editON = editON +1 WHERE taskid = ?;",taskid,
+    connection.query(`UPDATE ${database}.todotask SET editON = editON +1 WHERE taskid = ?;`,taskid,
     (err,result)=>{
         if (err) {
             console.log(err);
